@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+{% load static %}
+<main>
+  
+   
+   
+    <section class="edica-landing-section edica-landing-blog">
+        <div class="container">
+            <h4 class="edica-landing-section-subtitle" data-aos="fade-up">Blog posts</h4>
+            <div class="row">
+                {% for i in latest_post %}
+                <div class="col-md-4 landing-blog-post" data-aos="fade-right">
+                    <img src="/{{i.featured_image}}" alt="blog post" width="400" height="200" class="blog-post-thumbnail">
+                    <p class="blog-post-category">{{i.category}}</p>
+                    <h4 class="blog-post-title">{{i.title | truncatechars:25}}.</h4><p>Author:{{i.author}}</p>
+                    <a href="{% url 'single_blog' i.id %}" class="blog-post-link">Learn more</a>
+                </div>{% endfor %}
+              
+                
+            </div>
+        </div>
+    </section>
+    <section class="edica-landing-section edica-landing-blog-posts">
+        <div class="container">
+            <div class="row">
+               
+               
+            </div>
+        </div>
+    </section>
+</main>
+
+
+            {% endblock %}

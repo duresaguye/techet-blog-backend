@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+{% load static %}
+<main class="blog-post">
+    <div class="container">
+        <h1 class="edica-page-title" data-aos="fade-up">Blog single page</h1>
+        {% for i in post %}
+        <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">Written by  {{i.author}} • {{i.date}}</p>
+        <section class="blog-post-featured-img" data-aos="fade-up" data-aos-delay="300">
+            <img src="/{{i.featured_image}}" alt="featured image" class="w-100">
+        </section>
+        <section class="post-content">
+            <div class="row">
+                <div class="col-lg-9 mx-auto" data-aos="fade-up">
+                    <h4><strong>{{i.title}}</strong></h4>
+                    <p>{{i.content | safe}}</p>
+                   
+                </div>
+            </div>
+          
+     
+        </section>
+        <div class="row">
+            <div class="col-lg-9 mx-auto">
+                <section class="related-posts">
+                  
+                </section>
+           {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+
+
+            {% endblock %}

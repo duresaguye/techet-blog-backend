@@ -1,0 +1,152 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+{% load static %}
+<main class="blog">
+    <div class="container">
+        <h1 class="edica-page-title" data-aos="fade-up">Blog</h1>
+        <section class="featured-posts-section">
+            <div class="row">
+                {% for i in main_post %}
+                <div class="col-md-4 fetured-post blog-post" data-aos="fade-right">
+                    <div class="blog-post-thumbnail-wrapper">
+                        <img src="/{{i.featured_image}}" alt="blog post">
+                    </div>
+                    <p class="blog-post-category">{{i.category}}</p>
+                    <a href="{% url 'single_blog' i.id %}" class="blog-post-permalink">
+                        <h6 class="blog-post-title">{{i.title | truncatechars:25}}</h6>
+                        <p>Author:{{i.author}}</p>
+                    </a>
+                </div>{% endfor %}
+                
+              
+            </div>
+        </section>
+       
+            <div class="col-md-12 sidebar" data-aos="fade-right">
+ <h5 class="widget-title">Popular</h5>
+                 <div class="row">
+                {% for i in popular_post %}
+                <div class="col-md-4 fetured-post blog-post" data-aos="fade-right">
+                    <div class="blog-post-thumbnail-wrapper">
+                        <img src="/{{i.featured_image}}" alt="blog post">
+                    </div>
+                    <p class="blog-post-category">{{i.category}}</p>
+                    <a href="{% url 'single_blog' i.id %}" class="blog-post-permalink">
+                        <h6 class="blog-post-title">{{i.title | truncatechars:25}}</h6>
+                        <p>Author:{{i.author}}</p>
+                    </a>
+                </div>{% endfor %}
+
+
+            </div>
+
+
+           <div class="col-md-12 sidebar" data-aos="fade-right">
+ <h5 class="widget-title">Editor Pick</h5>
+                 <div class="row">
+                {% for i in editorpick_post %}
+                <div class="col-md-4 fetured-post blog-post" data-aos="fade-right">
+                    <div class="blog-post-thumbnail-wrapper">
+                        <img src="/{{i.featured_image}}" alt="blog post">
+                    </div>
+                    <p class="blog-post-category">{{i.category}}</p>
+                    <a href="{% url 'single_blog' i.id %}" class="blog-post-permalink">
+                        <h6 class="blog-post-title">{{i.title | truncatechars:25}}</h6>
+                        <p>Author:{{i.author}}</p>
+                    </a>
+                </div>{% endfor %}
+
+
+            </div>
+
+
+
+           <div class="col-md-12 sidebar" data-aos="fade-right">
+ <h5 class="widget-title">Latest Posts</h5>
+                 <div class="row">
+                {% for i in latest_post %}
+                <div class="col-md-4 fetured-post blog-post" data-aos="fade-right">
+                    <div class="blog-post-thumbnail-wrapper">
+                        <img src="/{{i.featured_image}}" alt="blog post">
+                    </div>
+                    <p class="blog-post-category">{{i.category}}</p>
+                    <a href="{% url 'single_blog' i.id %}" class="blog-post-permalink">
+                        <h6 class="blog-post-title">{{i.title | truncatechars:25}}</h6>
+                        <p>Author:{{i.author}}</p>
+                    </a>
+                </div>{% endfor %}
+
+            </div>
+
+<hr />
+         <div class="col-md-12 sidebar" data-aos="fade-right">
+ <h5 class="widget-title">Inspirational Posts</h5>
+                 <div class="row">
+                {% for i in inspirational_post %}
+                <div class="col-md-4 fetured-post blog-post" data-aos="fade-right">
+                    <div class="blog-post-thumbnail-wrapper">
+                        <img src="/{{i.featured_image}}" alt="blog post">
+                    </div>
+                    <p class="blog-post-category">{{i.category}}</p>
+                    <a href="{% url 'single_blog' i.id %}" class="blog-post-permalink">
+                        <h6 class="blog-post-title">{{i.title | truncatechars:25}}</h6>
+                        <p>Author:{{i.author}}</p>
+                    </a>
+                </div>{% endfor %}
+
+
+            </div>
+<hr />
+
+
+
+                     <div class="col-md-12 sidebar" data-aos="fade-right">
+ <h5 class="widget-title">Trending Posts</h5>
+                 <div class="row">
+                {% for i in trending_post %}
+                <div class="col-md-4 fetured-post blog-post" data-aos="fade-right">
+                    <div class="blog-post-thumbnail-wrapper">
+                        <img src="/{{i.featured_image}}" alt="blog post">
+                    </div>
+                    <p class="blog-post-category">{{i.category}}</p>
+                    <a href="{% url 'single_blog' i.id %}" class="blog-post-permalink">
+                        <h6 class="blog-post-title">{{i.title | truncatechars:25}}</h6>
+                        <p>Author:{{i.author}}</p>
+                    </a>
+                </div>{% endfor %}
+                 </div>
+<hr />
+
+
+
+
+                      <div class="col-md-12 sidebar" data-aos="fade-right">
+ <h5 class="widget-title">Recent Posts</h5>
+                 <div class="row">
+                {% for i in recent_post %}
+                <div class="col-md-4 fetured-post blog-post" data-aos="fade-right">
+                    <div class="blog-post-thumbnail-wrapper">
+                        <img src="/{{i.featured_image}}" alt="blog post">
+                    </div>
+                    <p class="blog-post-category">{{i.category}}</p>
+                    <a href="{% url 'single_blog' i.id %}" class="blog-post-permalink">
+                        <h6 class="blog-post-title">{{i.title | truncatechars:25}}</h6>
+                        <p>Author:{{i.author}}</p>
+                    </a>
+                </div>{% endfor %}
+                 </div>
+<hr />
+
+
+
+
+
+            
+        </div>
+    </div>
+
+</main>
+
+
+            {% endblock %}
