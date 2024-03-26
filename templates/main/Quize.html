@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="quiz-container">
+        <h2>Quiz Questions</h2>
+        <ol>
+            {% for question in questions %}
+                <li>{{ question.text }}</li>
+                <ul>
+                    {% if question.is_answered %}
+                        {% if question.is_correct %}
+                            <li class="correct">Correct!</li>
+                        {% else %}
+                            <li class="incorrect">Incorrect! <button onclick="revealAnswer('{{ question.correct_option }}')">Show Answer</button></li>
+                        {% endif %}
+                    {% else %}
+                        <li><input type="radio" name="answer{{ question.id }}" value="{{ question.option1 }}"> {{ question.option1 }}</li>
+                        <li><input type="radio" name="answer{{ question.id }}" value="{{ question.option2 }}"> {{ question.option2 }}</li>
+                        <li><input type="radio" name="answer{{ question.id }}" value="{{ question.option3 }}"> {{ question.option3 }}</li>
+                        <li><input type="radio" name="answer{{ question.id }}" value="{{ question.option4 }}"> {{ question.option4 }}</li>
+                        <button onclick="submitAnswer('{{ question.id }}')">Submit</button>
+                    {% endif %}
+                </ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <script>
+        function submitAnswer(questionId) {
+            // JavaScript code for submitting the answer goes here
+        }
+
+        function revealAnswer(correctOption) {
+            // JavaScript code for revealing the answer goes here
+        }
+    </script>
+
+    
+{% endblock %}

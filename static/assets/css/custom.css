@@ -1,0 +1,172 @@
+.navbar-custom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    background-color: #ffffff; 
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    
+    color: #0056b3 ; 
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #ffffff; 
+    background-color: #0056b3; 
+}
+
+.navbar-custom .navbar-nav .nav-item.active .nav-link {
+    color: #ffffff;
+    color: #0056b3 ; 
+   }
+
+/* Dropdown styles */
+.dropdown {
+    position: relative; 
+}
+
+.dropdown-content {
+    display: none; /* Hide dropdown content by default */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown content on hover */
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0; /* Hover background color */
+}
+h3::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 50px; 
+    background-color: #333; 
+    margin-right: 10px; 
+    vertical-align: middle;
+  }
+  .intro {
+    text-align: center;
+    padding: 50px 0; 
+}
+
+.intro h1 {
+    font-size: 36px; 
+    margin-bottom: 20px; 
+    color: #333; 
+}
+
+.intro p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    color: #666; 
+}
+
+.edica-landing-section-subtitle {
+    font-size: 24px; 
+    margin-top: 40px; /* Add margin above the subtitle */
+    color: #007bff; /* Set text color */
+}
+
+  .quiz-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px; 
+        padding: 100px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+       }
+        .quiz-container h2 {
+            margin-bottom: 10px;
+        }
+
+        .quiz-container ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .quiz-container ul {
+            list-style-type: none;
+            margin-top: 5px;
+        }
+
+        .quiz-container input[type="radio"] {
+            margin-right: 10px;
+        }
+
+    .quiz-container button {
+    margin-top: 10px; 
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+        .quiz-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+        .edica-footer {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .footer-info,
+        .footer-contact {
+            width: 45%;
+        }
+        
+        .footer-info h3,
+        .footer-contact h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .footer-info p,
+        .footer-contact p {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .footer-bottom {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }

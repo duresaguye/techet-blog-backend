@@ -1,4 +1,6 @@
 from django.shortcuts import render,redirect,HttpResponse
+
+from authentication.models import Question  
 from authentication.models import Post
 
 
@@ -54,3 +56,38 @@ def SINGLE_BLOG(request,id):
     }
 
     return render(request,'main/single_blog.html',context)
+def podcast(request):
+    # Your view logic here
+    return render(request, 'main/podcast.html')
+
+
+
+def quize(request):
+    # Fetch questions from the database
+    questions = Question.objects.all() 
+    context = {
+        'questions': questions, 
+    }
+
+  
+    return render(request, 'main/Quize.html', context)
+
+
+def services(request):
+
+    return render(request, 'main/Services.html')
+
+def about(request):
+    return render(request, 'main/About.html')
+
+def news(request):
+    return render(request, 'main/news.html')
+
+def trending (request):
+    return render(request, 'main/trending.html')
+
+def ai_software(request):
+    return render(request, 'main/ai_software.html')
+
+def hardware_gadgets(request):
+    return render(request, 'main/hardware_gadgets.html')
