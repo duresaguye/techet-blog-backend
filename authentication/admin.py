@@ -1,5 +1,5 @@
 from django.contrib import admin
-
+from embed_video.admin import AdminVideoMixin
 from .models import *
 
 
@@ -7,6 +7,10 @@ from .models import *
 
 
 
+
+
+class YoutubeAdmin(admin.ModelAdmin):
+    list_display = ('video', 'slug', 'status') 
 
 class TagTublerInline(admin.TabularInline):
     model = Tag
@@ -21,3 +25,5 @@ admin.site.register(Category)
 admin.site.register(Post,PostAdmin)
 admin.site.register(Tag)
 admin.site.register(Question)
+admin.site.register(Youtube, YoutubeAdmin)
+

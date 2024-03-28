@@ -4,7 +4,7 @@ from django.utils.text import slugify
 from django.db.models.signals import pre_save
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
-
+from embed_video.fields import EmbedVideoField
 class Category(models.Model):
     name = models.CharField(max_length=200)
 
@@ -60,6 +60,7 @@ class Tag(models.Model):
     name = models.CharField(max_length=100)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 class Question(models.Model):
+
     text = models.CharField(max_length=255)
     option1 = models.CharField(max_length=100)
     option2 = models.CharField(max_length=100)
@@ -88,20 +89,22 @@ class Services(models.Model):
     def __str__(self):
         return self.title
     
-class podcast(models.Model):
-    title = models.CharField(max_length=255)
-    description = models.TextField()    
-    video = models.FileField(upload_to="podcasts")  # TODO: Add validators for file types (mp3 only).
-    pub_date = models.DateField(default=timezone.now) 
-    class Meta:
-        ordering = ['-pub_date']  
-        
-    def __str__(self):
-        return f"{self.title} - {self.description[:60]}"
 
-
-
+class Youtube(models.Model):
+    STATUS = (
+        ('0', 'Draft'),
+        ('1', 'Published'),
+    )
+    
+    video = EmbedVideoField()
+    slug = models.SlugField(max_length=200, unique=False) 
+    status = models.CharField(choices=STATUS, max_length=100)
 
     def __str__(self):
-        return self.name
+        return self.video
+2
+
+
+
+   
 

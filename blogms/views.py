@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect,HttpResponse
-
+from authentication.models import Youtube
 from authentication.models import Question  
 from authentication.models import Post
 
@@ -57,8 +57,8 @@ def SINGLE_BLOG(request,id):
 
     return render(request,'main/single_blog.html',context)
 def podcast(request):
-    # Your view logic here
-    return render(request, 'main/podcast.html')
+    videos = Youtube.objects.all()  # Fetch all Youtube videos from the database
+    return render(request, 'main/podcast.html', {'videos': videos})
 
 
 
@@ -80,14 +80,4 @@ def services(request):
 def about(request):
     return render(request, 'main/About.html')
 
-def news(request):
-    return render(request, 'main/news.html')
 
-def trending (request):
-    return render(request, 'main/trending.html')
-
-def ai_software(request):
-    return render(request, 'main/ai_software.html')
-
-def hardware_gadgets(request):
-    return render(request, 'main/hardware_gadgets.html')

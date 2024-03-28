@@ -1,17 +1,33 @@
-<!-- about.html -->
+<!-- podcast.html -->
 
 {% extends 'main/base.html' %}
 
-{% block title %}podcast{% endblock %}
+{% block title %}podcast and Techኢት video's{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <h1>About Us</h1>
-            <p>Welcome to our website! We are dedicated to providing high-quality content and services.</p>
-            <p>Feel free to contact us if you have any questions or inquiries.</p>
+<section class="edica-landing-section edica-landing-blog-posts">
+    <div style="display: flex; justify-content: center; align-items: center;">
+     <h3 class="edica-landing-section-subtitle" data-aos="fade-up">Recent podcast</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% load embed_video_tags %}
+            {% for v in videos %}
+            <div class="col-md-4" data-aos="fade-up" alt="podcast video">
+                {% video v.video as my %}
+                <iframe src="{{ my.url }}" width="350" height="260" allowfullscreen></iframe>
+                {% endvideo %}
+            </div>
+            {% endfor %}
         </div>
     </div>
-</div>
+    
+</section>
+<section class="edica-landing-section edica-landing-blog-posts">
+    <div class="container">
+        <div class="row">
+            <!-- Content for the second section -->
+        </div>
+    </div>
+</section>
 {% endblock %}

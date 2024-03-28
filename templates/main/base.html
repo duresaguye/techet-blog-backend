@@ -28,17 +28,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="edicaMainNav">
                     <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="dropdown">
-                            <a class="nav-link" href="#">News <i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-content">
-                                <a href="#">Trending News</a>
-                                <a href="#">AI & Software</a>
-                                <a href="#">Hardware & Gadgets</a>
-                                <a href="#">Industry & Innovation</a>
-                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'podcast' %}">Podcast</a>
@@ -80,22 +71,30 @@
                 </div>
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
-                    <p>Email: contact.techeth@gmail.com</p>
-                    <p>Phone: +251994445412</p>
+                    <p>Email: <a href="mailto:contact.techeth@gmail.com">contact.techeth@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+251994445412">+251994445412</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="mb-0">© 2024 Techኢት Blog. All rights reserved.</p>
+                <p class="mb-0">© <span id="currentYear"></span> Techኢት Blog. All rights reserved.</p>
             </div>
+            
+            <div class="order-3 mt-2 w-full sm:order-2 sm:w-auto">
+                <a href="https://t.me/TechInEthio" class="btn btn-primary btn-block" target="_blank">Join our Telegram channel</a>
+            </div>
+            
         </div>
     </footer>
-    
 
     <script src="{% static 'assets/vendors/popper.js/popper.min.js' %}"></script>
     <script src="{% static 'assets/vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/vendors/aos/aos.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
     <script>
+         const currentYear = new Date().getFullYear();
+            
+            // Update the content of the span element with the current year
+            document.getElementById('currentYear').textContent = currentYear;
         AOS.init({
             duration: 2000
         });

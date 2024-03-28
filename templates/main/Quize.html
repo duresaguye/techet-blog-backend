@@ -1,6 +1,55 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
+<style>
+     .quiz-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px; 
+        padding: 100px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+       }
+        .quiz-container h2 {
+            margin-bottom: 10px;
+        }
+
+        .quiz-container ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .quiz-container ul {
+            list-style-type: none;
+            margin-top: 5px;
+        }
+
+        .quiz-container input[type="radio"] {
+            margin-right: 10px;
+        }
+
+    .quiz-container button {
+    margin-top: 10px; 
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.quiz-container button:hover {
+            background-color: #0056b3;
+        }
+
+.correct {
+            color: green;
+        }
+
+.incorrect {
+            color: red;
+        }
+</style>
     <div class="quiz-container">
         <h2>Quiz Questions</h2>
         <ol>

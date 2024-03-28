@@ -23,33 +23,7 @@
     color: #0056b3 ; 
    }
 
-/* Dropdown styles */
-.dropdown {
-    position: relative; 
-}
 
-.dropdown-content {
-    display: none; /* Hide dropdown content by default */
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block; /* Show dropdown content on hover */
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 8px 16px;
-    color: #333;
-    text-decoration: none;
-}
-
-.dropdown-content a:hover {
-    background-color: #f0f0f0; /* Hover background color */
-}
 h3::before {
     content: "";
     display: inline-block;
@@ -82,89 +56,43 @@ h3::before {
     color: #007bff; /* Set text color */
 }
 
-  .quiz-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 100px; 
-        padding: 100px;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
-       }
-        .quiz-container h2 {
-            margin-bottom: 10px;
-        }
-
-        .quiz-container ol {
-            list-style-type: decimal;
-            padding-left: 20px;
-        }
-
-        .quiz-container ul {
-            list-style-type: none;
-            margin-top: 5px;
-        }
-
-        .quiz-container input[type="radio"] {
-            margin-right: 10px;
-        }
-
-    .quiz-container button {
-    margin-top: 10px; 
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-        .quiz-container button:hover {
-            background-color: #0056b3;
-        }
-
-        .correct {
-            color: green;
-        }
-
-        .incorrect {
-            color: red;
-        }
-        .edica-footer {
+ 
+.edica-footer {
             background-color: #f8f9fa;
             padding: 30px 0;
         }
+
         
-        .footer-content {
+.footer-content {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
         }
-        
-        .footer-info,
-        .footer-contact {
+.footer-info,
+.footer-contact {
             width: 45%;
         }
         
-        .footer-info h3,
-        .footer-contact h3 {
+.footer-info h3,
+.footer-contact h3 {
             color: #333;
             margin-bottom: 10px;
         }
         
-        .footer-info p,
-        .footer-contact p {
+.footer-info p,
+.footer-contact p {
             color: #666;
             margin-bottom: 5px;
         }
         
-        .footer-bottom {
+.footer-bottom {
             margin-top: 20px;
             text-align: center;
             font-size: 14px;
             color: #999;
         }
         
-        .footer {
+.footer {
             background-color: #f8f9fa;
             padding: 20px 0;
             text-align: center;
