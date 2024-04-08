@@ -1,61 +1,33 @@
 {% extends 'main/base.html' %}
+{% block title %}{% endblock %}
+{% load static %}
 
 {% block content %}
-<style>
-     .quiz-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 100px; 
-        padding: 100px;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
-       }
-        .quiz-container h2 {
-            margin-bottom: 10px;
-        }
+<!-- SVG Icon -->
 
-        .quiz-container ol {
-            list-style-type: decimal;
-            padding-left: 20px;
-        }
 
-        .quiz-container ul {
-            list-style-type: none;
-            margin-top: 5px;
-        }
+<div class="edica-landing-section edica-landing-blog-posts"
+    style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div style="color: #343a40; font-size: 24px; font-weight: bold; padding-top: 50px;">
+        <h1>Coming Soon</h1>
+    </div>
+    <img src="{% static 'assets/images/favicon.png'%}" alt="Your browser does not support SVGs">
 
-        .quiz-container input[type="radio"] {
-            margin-right: 10px;
-        }
+</div>
 
-    .quiz-container button {
-    margin-top: 10px; 
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
 
-.quiz-container button:hover {
-            background-color: #0056b3;
-        }
 
-.correct {
-            color: green;
-        }
 
-.incorrect {
-            color: red;
-        }
+<!-- 
+    <style>
+    
 </style>
-    <div class="quiz-container">
+    <div class="quiz-container" style="padding-bottom: 200px; padding-top: 100px;">
         <h2>Quiz Questions</h2>
         <ol>
             {% for question in questions %}
                 <li>{{ question.text }}</li>
-                <ul>
+                <ol>
                     {% if question.is_answered %}
                         {% if question.is_correct %}
                             <li class="correct">Correct!</li>
@@ -69,7 +41,7 @@
                         <li><input type="radio" name="answer{{ question.id }}" value="{{ question.option4 }}"> {{ question.option4 }}</li>
                         <button onclick="submitAnswer('{{ question.id }}')">Submit</button>
                     {% endif %}
-                </ul>
+                </ol>
             {% endfor %}
         </ol>
     </div>
@@ -83,6 +55,8 @@
             // JavaScript code for revealing the answer goes here
         }
     </script>
+  -->
+
 
     
 {% endblock %}

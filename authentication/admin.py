@@ -10,7 +10,7 @@ from .models import *
 
 
 class YoutubeAdmin(admin.ModelAdmin):
-    list_display = ('video', 'slug', 'status') 
+    list_display = ('video', 'slug', 'status','is_recent') 
 
 class TagTublerInline(admin.TabularInline):
     model = Tag

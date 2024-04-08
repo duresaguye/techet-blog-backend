@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Techኢት:: Home</title>
+    <title>Techኢት || Home</title>
     <link rel="stylesheet" href="{% static 'assets/vendors/flag-icon-css/css/flag-icon.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/vendors/font-awesome/css/all.min.css' %}">
     <link href="{% static 'assets/vendors/aos/aos.css' %}" rel="stylesheet">
@@ -18,51 +18,62 @@
     
 </head>
 <body>
-    <div class="edica-loader"></div>
     <header class="edica-header edica-landing-header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-                <a class="navbar-brand" href="{% url 'blog' %}" style="font-weight: bold;color: red;">Techኢት</a>
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-expand-lg  navbar-custom" >
+            <a class="navbar-brand" href="{% url 'blog' %}">
+                <img src="{% static 'assets/images/tech logo.jpg'%}" class="rounded-circle" alt="Techኢት Logo" style="max-height: 70px; max-width: 100px;">
+            </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="edicaMainNav">
-                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'podcast' %}">Podcast</a>
-                        </li>
+        </button>
+        <div class="collapse navbar-collapse" id="edicaMainNav">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'podcast' %}">Podcast</a>
+                    </li>
                        
-                        <li class="nav-item">
+                    <li class="nav-item">
                             <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'quize' %}">Techኢት Quize</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'services' %}">Our Services</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                        </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'quize' %}">Techኢት Quize</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'services' %}">Our Services</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    </li>
                         
                       
-                        {% if user.is_authenticated and user.is_staff %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
-                            </li>
+                    {% if user.is_authenticated and user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+                        </li>
                         {% endif %}
                     </ul>
+
+                    
                 </div>
+                <label class="ui-switch">
+                    <input id="theme-switch" type="checkbox">
+                    <div class="slider">
+                        <div class="circle"></div>
+                    </div>
+                </label>
             </nav>
+            
         </div>
+        
     </header>
 
     {% block content %}
        
     {% endblock %}
 
-    <footer class="edica-footer" data-aos="fade-up">
+    <footer class="edica-footer" data-aos="fade-up" style="padding-top: 100px;">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
@@ -97,7 +108,9 @@
             document.getElementById('currentYear').textContent = currentYear;
         AOS.init({
             duration: 2000
+            
         });
+       
     </script>
 </body>
 </html>

@@ -99,10 +99,11 @@ class Youtube(models.Model):
     video = EmbedVideoField()
     slug = models.SlugField(max_length=200, unique=False) 
     status = models.CharField(choices=STATUS, max_length=100)
+    is_recent = models.BooleanField(default=False)
 
     def __str__(self):
         return self.video
-2
+
 
 
 
