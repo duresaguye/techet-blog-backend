@@ -1,8 +1,17 @@
 from django.contrib import admin
+from embed_video.admin import AdminVideoMixin
 from .models import *
 
 
 # Register your models here.
+
+
+
+
+
+class YoutubeAdmin(admin.ModelAdmin):
+    list_display = ('video', 'slug', 'status','is_recent') 
+
 class TagTublerInline(admin.TabularInline):
     model = Tag
 
@@ -15,3 +24,6 @@ class PostAdmin(admin.ModelAdmin):
 admin.site.register(Category)
 admin.site.register(Post,PostAdmin)
 admin.site.register(Tag)
+admin.site.register(Question)
+admin.site.register(Youtube, YoutubeAdmin)
+
