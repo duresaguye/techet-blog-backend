@@ -1,1 +1,1 @@
-full stack blogsite 
+Techኢት blogsite 
