@@ -2,6 +2,7 @@
 
 {% block content %}
 {% load static %}
+
 <main class="blog">
         <section class="edica-landing-section edica-landing-blog-posts">
         <div style="display: flex; justify-content: center; align-items: center;">
@@ -15,10 +16,11 @@
                             <img src="/{{i.featured_image}}" alt="blog post">
                         </div>
                         <p class="blog-post-category">{{i.category}}</p>
-                        <a href="{% url 'single_blog' i.id %}" class="blog-post-permalink">
+                     
                             <h6 class="blog-post-title">{{i.title | truncatechars:25}}</h6>
                             <p>Author:{{i.author}}</p>
-                        </a>
+                        
+                        <a href="{% url 'single_blog' i.id %}" class="blog-post-link">Read</a>
                     </div>{% endfor %}
                 </div>
             </div>

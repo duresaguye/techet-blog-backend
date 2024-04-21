@@ -3,6 +3,7 @@
 
 {% block content %}
 {% load static %}
+
 <main style="padding-bottom: 100px;">
     <section class="edica-landing-section">
         <div class="intro">
@@ -18,7 +19,7 @@
                     <p class="blog-post-category">{{i.category}}</p>
                     <h4 class="blog-post-title">{{i.title | truncatechars:25}}.</h4>
                     <p>Author:{{i.author}}</p>
-                    <a href="{% url 'single_blog' i.id %}" class="blog-post-link">Learn more</a>
+                    <a href="{% url 'single_blog' i.id %}" class="blog-post-link">Read</a>
                 </div>
                 {% endfor %}
             </div>

@@ -23,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-j+i11pflph*mbu8eq1(k3j3-4_k17_xx3bc!rf%y^(j1jxk!1k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-<<<<<<< HEAD
+
 DEBUG = True
-=======
-DEBUG = False
-ALLOWED_HOSTS = ['blogsite-zcci.onrender.com', '127.0.0.1', 'localhost']
->>>>>>> 9ec0f9957797ac75212f3d5f6bbe6fc79ab37fed
+
+
+ALLOWED_HOSTS = []
+
 
 
 
