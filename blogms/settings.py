@@ -23,9 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-j+i11pflph*mbu8eq1(k3j3-4_k17_xx3bc!rf%y^(j1jxk!1k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
 DEBUG = True
+=======
+DEBUG = False
+ALLOWED_HOSTS = ['blogsite-zcci.onrender.com', '127.0.0.1', 'localhost']
+>>>>>>> 9ec0f9957797ac75212f3d5f6bbe6fc79ab37fed
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -120,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
@@ -169,6 +173,7 @@ CUSTOM_TOOLBAR = [
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'Custom',
+        'config.versionCheck': False,
         'toolbar_Custom': [
             {'name': 'document', 'items': ['Source']},
             {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
@@ -187,6 +192,7 @@ CKEDITOR_CONFIGS = {
             {'name': 'tools', 'items': ['Maximize']},
             {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll', '-', 'SpellChecker', 'Scayt']},
         ],
+        
         'height': 400,
         'width': 800,
     },
