@@ -169,6 +169,7 @@ CUSTOM_TOOLBAR = [
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'Custom',
+        'config.versionCheck': False,
         'toolbar_Custom': [
             {'name': 'document', 'items': ['Source']},
             {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
@@ -187,6 +188,7 @@ CKEDITOR_CONFIGS = {
             {'name': 'tools', 'items': ['Maximize']},
             {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll', '-', 'SpellChecker', 'Scayt']},
         ],
+        
         'height': 400,
         'width': 800,
     },
