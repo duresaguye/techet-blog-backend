@@ -13,7 +13,8 @@ SECRET_KEY = 'django-insecure-cfvt21abh2lu%@in2^ecrb0n+)xr1&(-689w5^khf474kztovd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['your-deployed-backend-url.com', '127.0.0.1', 'localhost']
+#ALLOWED_HOSTS = ['your-deployed-backend-url.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "DuraG.pythonanywhere.com"]
 
 # Application definition
 
