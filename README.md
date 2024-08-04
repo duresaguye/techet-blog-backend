@@ -1,1 +1,1 @@
-Techኢት blogsite 
+Techኢት blogsite backend
